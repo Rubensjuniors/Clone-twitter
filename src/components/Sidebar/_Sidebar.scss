@@ -1,0 +1,52 @@
+@import "../../style/ultilitarios.scss";
+
+.sidebar {
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  .logo {
+    width: 2rem;
+    height: 2rem;
+  }
+  .main__navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .main__navigation a {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    &.active {
+      color: $twitter-blue;
+    }
+  }
+  .main__navigation a svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  .new__tweet {
+    @include TweetButton(100%, 1.25rem);
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      display: none;
+    }
+  }
+}
+
+@include devaice(780px) {
+  .sidebar {
+    padding: 1.5rem 0.75rem;
+    align-items: center;
+    span {
+      display: none;
+    }
+  }
+  .new__tweet svg{
+    display: block !important;
+  }
+}

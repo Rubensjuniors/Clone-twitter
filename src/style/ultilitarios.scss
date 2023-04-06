@@ -1,0 +1,25 @@
+$twitter-blue: #1da1f2;
+
+@mixin TweetButton($width: auto, $fontSize: 1rem, $padding: 1rem){
+  background: $twitter-blue;
+  border-radius: 999px;
+  padding: $padding;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $width;
+  color: #fff;
+  font-size: $fontSize;
+  font-weight: 900;
+  border: 0;
+  &:hover {
+    filter: brightness(0.9);
+  }
+
+}
+
+@mixin devaice($width){
+  @media(max-width: $width) {
+    @content;
+  }
+}
