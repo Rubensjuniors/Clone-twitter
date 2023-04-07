@@ -2,12 +2,16 @@ import "./_TimeLine.scss";
 import Header from "../../components/Header/Header";
 import Separator from "../../components/Separator/Separator";
 import Tweet from "../../components/Tweet/Tweet";
-import { FormEvent, useState } from "react";
+import { FormEvent, KeyboardEvent, useState } from "react";
 import { PaperPlaneRight } from "@phosphor-icons/react";
 
 const TimeLine = () => {
   const [newTweet, setNewTweet] = useState('');
-  const [tweet, setTweet] = useState(["Esse e um tweet do teste"]);
+  const [tweet, setTweet] = useState([
+    'Meu primeiro tweet',
+    'Teste',
+    'Deu certo tweetar!'
+  ]);
 
   const createNewTweet = (event: FormEvent) => {
     event.preventDefault();
@@ -18,16 +22,12 @@ const TimeLine = () => {
     setNewTweet("");
   };
 
-  const valueTweet = ({ target }) => {
-    setNewTweet(target.value);
-  };
-
-  const handleHotKeySubmit = ({ key, ctrlKey, metaKey }: KeyboardEvent) => {
-    if (key === "Enter" && (ctrlKey || metaKey)) {
-      setTweet([newTweet, ...tweet]);
-      setNewTweet("");
+  const handleHotkeySubmit = ({key, ctrlKey, metaKey}: KeyboardEvent)=>{
+    if(key === 'Enter' && (ctrlKey || metaKey)){
+       setTweet([newTweet, ...tweet])
+      setNewTweet('')
     }
-  };
+ }
 
   return (
     <>
@@ -45,8 +45,8 @@ const TimeLine = () => {
               id="Tweet"
               value={newTweet}
               placeholder="What is thinking?"
-              onChange={valueTweet}
-              onKeyDown={handleHotKeySubmit}
+              onKeyDown={handleHotkeySubmit}
+              onChange={event => setNewTweet(event.target.value)}
             ></textarea>
           </label>
           <button type="submit">

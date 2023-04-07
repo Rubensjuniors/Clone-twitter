@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, KeyboardEvent, useState } from "react";
+import {  FormEvent, KeyboardEvent, useState } from "react";
 import Header from "../../components/Header/Header";
 import Separator from "../../components/Separator/Separator";
 import Tweet from "../../components/Tweet/Tweet";
@@ -19,10 +19,6 @@ const Status = () => {
     setAnswerTweet([answerTweetValue,...answerTweet])
     setAnswerTweetValue('')
  
-  }
-
-  const valueAnswerTweet = ({target})=>{
-    setAnswerTweetValue(target.value)
   }
 
    const handleHotKeySubmit = ({key, ctrlKey, metaKey}: KeyboardEvent)=>{
@@ -49,7 +45,7 @@ const Status = () => {
               name="Tweet"
               id="Tweet"
               value={answerTweetValue}
-              onChange={valueAnswerTweet}
+              onChange={event => setAnswerTweetValue(event.target.value)}
               onKeyDown={handleHotKeySubmit}
               placeholder="Tweet your answer"
             ></textarea>
