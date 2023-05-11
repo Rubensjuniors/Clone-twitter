@@ -1,4 +1,5 @@
-@import "./ultilitarios.scss";
+@import "../assets//style/ultilitarios.scss";
+@import "../assets/style/BreakPoints.scss";
 
 .layout {
   margin: 0 auto;
@@ -6,10 +7,10 @@
   min-height: 100vh;
 
   display: grid;
-  grid-template-columns: 300px 1fr;
-
-@include devaice(780px){
   grid-template-columns: 80px 1fr;
+
+@include md{
+  grid-template-columns: 300px 1fr;
 }
   .content {
     border-left: 1px solid #ebeef0;

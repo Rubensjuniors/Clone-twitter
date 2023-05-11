@@ -5,7 +5,7 @@
 }
 
 body{
-  color: #0f1419;
+  color: #000;
   -webkit-font-smoothing: antialised
 }
 
@@ -15,6 +15,7 @@ body, input, textarea, button{
 
 button{
   cursor: pointer;
+  border: 0;
 }
 
 a{
@@ -23,4 +24,3 @@ a{
 }
 
 
-@import "../style/layout.scss";
