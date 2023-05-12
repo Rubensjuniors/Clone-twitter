@@ -1,8 +1,10 @@
+@import "./BreakPoints.scss";
+
 $twitter-blue: #1da1f2;
 $thema-light: #ffffff;
 $thema-dark: #000;
 
-@mixin TweetButton($width: auto, $fontSize: 1rem, $padding: 1rem){
+@mixin TweetButton($width: auto, $fontSize: 1rem, $padding: 1rem) {
   max-width: $width;
   background: $twitter-blue;
   border-radius: 999px;
@@ -13,11 +15,28 @@ $thema-dark: #000;
   &:hover {
     filter: brightness(0.943);
   }
-
 }
 
-@mixin devaice($width){
-  @media(max-width: $width) {
+.limit-text-sm {
+  max-width: 40px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media (min-width: 400px){
+  .limit-text-sm {
+    max-width: 80px;
+  }
+}
+@media (min-width: 600px){
+  .limit-text-sm {
+    max-width: 120px;
+  }
+}
+
+@mixin devaice($width) {
+  @media (max-width: $width) {
     @content;
   }
 }

@@ -33,7 +33,12 @@ const Status = () => {
       <main className="status">
         <Header title="Tweet" />
 
-        <Tweet content="Esse e um tweet Teste" />
+        <Tweet 
+        photo="https://avatars.githubusercontent.com/u/104171589?v=4"
+        name="Rubens Junio"
+        user="@Eorubis"
+        time='1m'
+        content='opaaa' />
         <Separator />
         <form onSubmit={createAnswerTweet} className="answerTweet__form">
           <label htmlFor="Tweet">
@@ -57,7 +62,13 @@ const Status = () => {
         </form>
       </main>
       {answerTweet.map((answer) => {
-        return <Tweet key={answer} content={answer} />;
+        return <Tweet 
+        key={answer} 
+        photo="https://avatars.githubusercontent.com/u/104171589?v=4"
+        name="Rubens Junio"
+        user="@Eorubis"
+        time='1m'
+        content={answer} />;;
       })}
     </>
   );

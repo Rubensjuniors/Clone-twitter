@@ -1,52 +1,57 @@
 import { Link, NavLink } from "react-router-dom";
 import "./_Tweet.scss";
-import { ChatCircle, ArrowsClockwise, Heart, Dot } from "@phosphor-icons/react";
+import { ChatCircle, ArrowsClockwise, Heart, DotsThreeOutline } from "@phosphor-icons/react";
 
 interface Tweet {
-  name?: string;
-  user?: string;
+  photo: string;
+  name: string;
+  user: string;
+  time: string | number;
   content: string;
 }
 
-const Tweet = ({ name, user, content }: Tweet) => {
+const Tweet = ({ photo, name, user, time, content }: Tweet) => {
   return (
-    <>
-      <Link to="/Status" className="tweet">
-        <img
-          className="tweet__profile-img"
-          src="https://avatars.githubusercontent.com/u/104171589?v=4"
-          alt="Rubensjunio"
-        />
+    <div className="tweet">
 
-        <div className="tweet__content">
-          <div className="tweet__content-header">
-            <div className="tweet__content-header-names">
-              <strong>Rubens Junio</strong>
-              <span>@Eorubis</span>
-            </div>
-            
-            <span className="tweet__content-header-hr">1s</span>
-          </div>
-
-          <p className="tweet__content-text">{content}</p>
-        </div>
-      </Link>
-
-      <div className="tweet-interaction">
-        <NavLink to="/Status" type="button">
-          <ChatCircle />
-          20
-        </NavLink>
-        <button type="button">
-          <ArrowsClockwise weight="fill" />
-          20
-        </button>
-        <button type="button">
-          <Heart />
-          20
-        </button>
+      <div className="tweet__photo">
+        <img src={photo} alt={name} />
       </div>
-    </>
+
+      <div className="tweet__texts">
+
+        <div className="tweet__texts-header">
+          <div>
+          <strong className="limit-text-sm">{name}</strong>
+          <span className="limit-text-sm">{user}</span>
+          <span className="tweet__texts-header-time">{time}</span>
+          </div>
+          <DotsThreeOutline size={24} weight="fill" />
+        </div>
+
+        <Link to="/Status" className="tweet__texts-content">
+          <p>{content}</p>
+        </Link>
+
+        <div className="tweet__texts-interaction">
+            <Link to="/Status" className="tweet__texts-interaction-item">
+              <ChatCircle/>
+              <span>0</span>
+            </Link>
+            <div className="tweet__texts-interaction-item">
+              <ArrowsClockwise/>
+              <span>0</span>
+            </div>
+            <div className="tweet__texts-interaction-item">
+              <Heart/>
+              <span>0</span>
+            </div>
+        </div>
+
+
+      </div>
+      <Link to="/Status"></Link>
+    </div>
   );
 };
 
