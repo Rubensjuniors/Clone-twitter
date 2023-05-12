@@ -42,6 +42,7 @@ const TimeLine = () => {
                 alt="Rubensjunio"
               />
             </div>
+            
             <textarea
               name="Tweet"
               id="Tweet"
@@ -60,7 +61,13 @@ const TimeLine = () => {
         <Separator />
       </main>
       {tweet.map((tweet) => {
-        return <Tweet key={tweet} content={tweet} />;
+        return <Tweet 
+        key={tweet} 
+        photo="https://avatars.githubusercontent.com/u/104171589?v=4"
+        name="Rubens Junio"
+        user="@Eorubis"
+        time='1m'
+        content={tweet} />;
       })}
     </>
   );
