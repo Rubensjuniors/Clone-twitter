@@ -16,7 +16,7 @@ const ProfileCard = ({ name, user, photo }: ProfileProps) => {
       </Link>
 
       <div className="card__names">
-          <strong className="card__names-name"><Link to="/">{name}</Link></strong>
+          <strong className="card__names-name limit-text-sm"><Link to="/">{name}</Link></strong>
           <span className="card__names-user">{user}</span>
       </div>
         <DotsThreeOutline size={24} weight="fill"/>
