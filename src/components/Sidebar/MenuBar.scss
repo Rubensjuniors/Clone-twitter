@@ -77,7 +77,7 @@
     display: flex;
   }
 }
-@include lg {
+@include xl {
   .menuBar{
     width: 300px;
   &__topside {
