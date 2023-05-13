@@ -11,6 +11,18 @@ const TimeLine = () => {
     "Meu primeiro tweet",
     "Teste",
     "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
   ]);
 
   const createNewTweet = (event: FormEvent) => {
@@ -31,8 +43,8 @@ const TimeLine = () => {
 
   return (
     <>
-      <main>
         <Header title="Home" />
+      <main>
 
         <form onSubmit={createNewTweet} className="timeline-form">
           <label htmlFor="Tweet" className="timeline-form__label">

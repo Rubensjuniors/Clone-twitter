@@ -1,20 +1,30 @@
 @import "../assets//style/ultilitarios.scss";
 @import "../assets/style/BreakPoints.scss";
-
-.layout {
+.layout{
   margin: 0 auto;
-  max-width: 1000px;
-  min-height: 100vh;
+  max-width: 1280px;
+  height: 100%;
 
-  display: grid;
-  grid-template-columns: 80px 1fr;
+ display: flex;
+ justify-content: center;
 
-@include md{
-  grid-template-columns: 300px 1fr;
-}
-  .content {
+
+  &__content {
+    width: min(601px, 100%);
+
     border-left: 1px solid #ebeef0;
     border-right: 1px solid #ebeef0;
     
+  }
+  .sidebar{
+    width: 300px;
+    display: none;
+  }
+  
+}
+
+@include lg{
+  .sidebar{
+    display: initial !important;
   }
 }

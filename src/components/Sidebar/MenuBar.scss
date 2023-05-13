@@ -1,0 +1,95 @@
+@import "../../assets/style/ultilitarios.scss";
+@import "../../assets/style/BreakPoints.scss";
+.menuBar{
+  min-width: 90px;
+  width: 90px;
+  max-height: 100vh;
+  padding: 0rem 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  position: sticky ;
+  top: 0px;
+  left: 0px;
+  overflow-y: auto;
+  &__topside {
+  width: 100%;
+  padding: 1.5rem 0rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+
+  span {
+    display: none;
+  }
+
+  &-logo img {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 10px;
+  }
+
+  &-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    a {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 5px 10px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      &:hover{
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 2rem;
+      }
+      &.active {
+        color: $twitter-blue;
+      }
+      span {
+        display: none;
+      }
+      svg {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+  &-button-tweet {
+    @include TweetButton(100%, 1.25rem);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+}
+
+@include lg {
+  .menuBar{
+    width: 300px;
+  &__topside {
+    align-items: start;
+    span {
+      display: initial !important;
+    }
+    &-button-tweet {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        display: none;
+      }
+    }
+  }
+}
+}

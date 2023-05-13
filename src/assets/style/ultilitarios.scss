@@ -5,7 +5,7 @@ $thema-light: #ffffff;
 $thema-dark: #000;
 
 @mixin TweetButton($width: auto, $fontSize: 1rem, $padding: 1rem) {
-  max-width: $width;
+  width: $width;
   background: $twitter-blue;
   border-radius: 999px;
   padding: $padding;
@@ -22,16 +22,11 @@ $thema-dark: #000;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-}
-
-@media (min-width: 400px){
-  .limit-text-sm {
-    max-width: 80px;
+  @media (min-width: 400px){
+      max-width: 100px;
   }
-}
-@media (min-width: 600px){
-  .limit-text-sm {
-    max-width: 120px;
+  @media (min-width: 600px){
+      max-width: 160px;
   }
 }
 
