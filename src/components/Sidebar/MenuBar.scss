@@ -6,7 +6,7 @@
   max-height: 100vh;
   padding: 0rem 1rem;
   padding-bottom: 1rem;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -30,7 +30,6 @@
   &-logo img {
     width: 2rem;
     height: 2rem;
-    margin-left: 10px;
   }
 
   &-navigation {
@@ -73,6 +72,11 @@
 }
 }
 
+@include sm{
+  .menuBar{
+    display: flex;
+  }
+}
 @include lg {
   .menuBar{
     width: 300px;
@@ -80,6 +84,10 @@
     align-items: start;
     span {
       display: initial !important;
+    }
+    &-logo img{
+    margin-left: 10px;
+
     }
     &-button-tweet {
       width: 100%;
