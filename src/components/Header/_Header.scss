@@ -1,6 +1,6 @@
 @import "../../assets/style/ultilitarios.scss";
 
-.timeline__header {
+.header {
   padding: 1.5rem 0.632rem;
   display: flex;
   align-items: center;
@@ -8,6 +8,11 @@
   font-size: 1.25rem;
   font-weight: 700;
   border-bottom: 1px solid #ebeef0;
+  position: sticky ;
+  top: 0px;
+  left: 0px;
+  overflow-y: auto;
+  backdrop-filter: blur(8px);
   svg {
     width: 1.5rem;
     height: 1.5rem;

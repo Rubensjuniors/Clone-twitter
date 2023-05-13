@@ -34,6 +34,7 @@
       
         span {
           font-size: 0.725rem;
+          margin-left: 5px;
           color: #89a2b8;
         }
 
@@ -78,15 +79,20 @@
         }
       }
     }
-    @include sm{
-      &-interaction{
-        gap: 3.5rem;
-      }
-    }
-    @include lg{
-      &-interaction{
-        gap: 6rem;
-      }
-    }
+  }
+}
+
+@include sm{
+  .tweet{
+
+  padding: 1rem 1.25rem;
+  &-interaction{
+    gap: 3.5rem;
+  }
+}
+}
+@include lg{
+  .tweet-interaction{
+    gap: 6rem;
   }
 }

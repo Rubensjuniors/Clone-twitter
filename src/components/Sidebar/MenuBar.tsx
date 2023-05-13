@@ -1,4 +1,4 @@
-import "./_Sidebar.scss";
+import "./MenuBar.scss";
 import twitterLogo from "../../assets/log-twitter.svg";
 import { Link, NavLink } from "react-router-dom";
 import {
@@ -12,13 +12,17 @@ import {
   DotsThreeCircle,
   Pencil,
 } from "@phosphor-icons/react";
+import ProfileCard from "../CardProfile/Profile";
 
-const Sidebar = () => {
+const MenuBar = () => {
   return (
-    <aside className="sidebar">
-      <img className="logo" src={twitterLogo} alt="Logo Twitter" />
+    <div className="menuBar">
+      <div className="menuBar__topside">
+      <div className="menuBar__topside-logo">
+       <img src={twitterLogo} alt="Logo Twitter" />
+      </div>
 
-      <nav className="main__navigation">
+      <nav className="menuBar__topside-navigation">
         <NavLink to="/">
           <House weight="fill" />
           <span>Home</span>
@@ -53,12 +57,21 @@ const Sidebar = () => {
         </Link>
       </nav>
 
-      <button className="new__tweet" type="button">
+      <button className="menuBar__topside-button-tweet" type="button">
         <span>Tweet</span>
-        <Pencil className="TweetButton-icon" />
+        <Pencil />
       </button>
-    </aside>
+      </div>
+
+      <div className="menuBar__bottomside">
+        <ProfileCard 
+        photo="https://avatars.githubusercontent.com/u/104171589?v=4"
+        name="Rubens Junio"
+        user="@Eorubis"
+        />
+      </div>
+    </div>
   );
 };
 
-export default Sidebar;
+export default MenuBar;

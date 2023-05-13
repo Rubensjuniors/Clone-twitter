@@ -6,7 +6,11 @@
 
 body{
   color: #000;
-  -webkit-font-smoothing: antialised
+  -webkit-font-smoothing: antialised;
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 body, input, textarea, button{

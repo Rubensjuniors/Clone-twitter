@@ -1,18 +1,22 @@
-import "./App.scss"
-import Sidebar from "../components/Sidebar/Sidebar";
+import "./App.scss";
 import { Outlet } from "react-router-dom";
-
+import MenuBar from "../components/Sidebar/MenuBar";
 
 const App = () => {
   return (
     <>
       <div className="layout">
-        <Sidebar />
 
-        <div className="content">
-         <Outlet />
+          <MenuBar />
+          
+
+          <div className="layout__content">
+            <Outlet />
+          </div>
+
+          <div className="sidebar">sidbar</div>
         </div>
-      </div>
+    
     </>
   );
 };
