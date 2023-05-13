@@ -5,10 +5,7 @@
   align-items: center;
   gap: 1rem;
   padding: 10px;
-  &:hover{
-    background: rgba( 0, 0, 0, 0.1);
-    border-radius: 3rem;
-  }
+
    &__photo img{
     width: 3rem;
     height: 3rem;
@@ -30,7 +27,11 @@
  
 }
 
-@include xl{
+@include lg{
+  .card:hover{
+    background: rgba( 0, 0, 0, 0.1);
+    border-radius: 3rem;
+  }
   .card__names{
     display: flex ;
   }

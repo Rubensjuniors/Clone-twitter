@@ -11,9 +11,9 @@ interface ProfileProps {
 const ProfileCard = ({ name, user, photo }: ProfileProps) => {
   return (
     <Link to="/" className="card">
-      <Link to="/" className="card__photo">
+      <div className="card__photo">
         <img src={photo} alt={name} />
-      </Link>
+      </div>
 
       <div className="card__names">
           <strong className="card__names-name limit-text-sm"><Link to="/">{name}</Link></strong>

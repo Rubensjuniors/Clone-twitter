@@ -1,6 +1,6 @@
 import "./App.scss";
 import { Outlet } from "react-router-dom";
-import MenuBar from "../components/Sidebar/MenuBar";
+import MenuBar from "../components/MenuLateral/MenuBar";
 
 const App = () => {
   return (

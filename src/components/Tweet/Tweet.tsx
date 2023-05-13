@@ -53,7 +53,6 @@ const Tweet = ({ photo, name, user, time, content }: Tweet) => {
           </div>
         </div>
       </div>
-      <Link to="/Status"></Link>
     </div>
   );
 };

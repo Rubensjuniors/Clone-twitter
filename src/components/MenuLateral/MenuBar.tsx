@@ -27,34 +27,34 @@ const MenuBar = () => {
           <House weight="fill" />
           <span>Home</span>
         </NavLink>
-        <Link to="/">
+        <NavLink to="/Explore">
           <Hash />
           <span>Explore</span>
-        </Link>
-        <Link to="/">
+        </NavLink>
+        <NavLink to="/Notifications">
           <Bell />
           <span>Notifications</span>
-        </Link>
-        <Link to="/">
+        </NavLink>
+        <NavLink to="/Messages">
           <EnvelopeSimple />
           <span>Messages</span>
-        </Link>
-        <Link to="/">
+        </NavLink>
+        <NavLink to="/Bookmarks">
           <BookmarkSimple />
           <span>Bookmarks</span>
-        </Link>
-        <Link to="/">
+        </NavLink>
+        <NavLink to="/List">
           <FileText />
           <span>List</span>
-        </Link>
-        <Link to="/">
+        </NavLink>
+        <NavLink to="/Profile">
           <User />
           <span>Profile</span>
-        </Link>
-        <Link to="/">
+        </NavLink>
+        <NavLink to="/More">
           <DotsThreeCircle />
           <span>More</span>
-        </Link>
+        </NavLink>
       </nav>
 
       <button className="menuBar__topside-button-tweet" type="button">

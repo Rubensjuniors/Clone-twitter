@@ -72,9 +72,9 @@ const TimeLine = () => {
         </form>
         <Separator />
       </main>
-      {tweet.map((tweet) => {
+      {tweet.map((tweet, index) => {
         return <Tweet 
-        key={tweet} 
+        key={index} 
         photo="https://avatars.githubusercontent.com/u/104171589?v=4"
         name="Rubens Junio"
         user="@Eorubis"
