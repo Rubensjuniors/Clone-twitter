@@ -10,13 +10,13 @@ interface ProfileProps {
 
 const ProfileCard = ({ name, user, photo }: ProfileProps) => {
   return (
-    <Link to="/" className="card">
+    <Link to="/Profile" className="card">
       <div className="card__photo">
         <img src={photo} alt={name} />
       </div>
 
       <div className="card__names">
-          <strong className="card__names-name limit-text-sm"><Link to="/">{name}</Link></strong>
+          <strong className="card__names-name limit-text-sm"><Link to="/Profile">{name}</Link></strong>
           <span className="card__names-user">{user}</span>
       </div>
         <DotsThreeOutline size={24} weight="fill"/>

@@ -24,7 +24,7 @@ const MenuBar = () => {
 
       <nav className="menuBar__topside-navigation">
         <NavLink to="/">
-          <House weight="fill" />
+          <House />
           <span>Home</span>
         </NavLink>
         <NavLink to="/Explore">
@@ -51,10 +51,10 @@ const MenuBar = () => {
           <User />
           <span>Profile</span>
         </NavLink>
-        <NavLink to="/More">
+        <a className="menuBar__topside-navigation-more">
           <DotsThreeCircle />
           <span>More</span>
-        </NavLink>
+        </a>
       </nav>
 
       <button className="menuBar__topside-button-tweet" type="button">

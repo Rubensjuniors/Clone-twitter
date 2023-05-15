@@ -1,4 +1,4 @@
-import "./TimeLine.scss";
+import "./Home.scss";
 import Header from "../../components/Header/Header";
 import Separator from "../../components/Separator/Separator";
 import Tweet from "../../components/Tweet/Tweet";
