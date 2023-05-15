@@ -18,17 +18,17 @@ interface Tweet {
 const Tweet = ({ photo, name, user, time, content }: Tweet) => {
   return (
     <div className="tweet">
-      <div className="tweet__photo">
+      <Link to="/Profile" className="tweet__photo">
         <img src={photo} alt={name} />
-      </div>
+      </Link>
 
       <div className="tweet__texts">
         <div className="tweet__texts-header">
           <div>
-            <p className="limit-text-sm">
+            <Link to="/Profile" className="limit-text-sm">
               <strong >{name}</strong>
               <span>{user}</span>
-            </p>
+            </Link>
             <span className="tweet__texts-header-time">{time}</span>
           </div>
           <DotsThreeOutline size={24} weight="fill" />
