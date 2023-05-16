@@ -1,0 +1,31 @@
+@import "../../assets/style/ultilitarios.scss";
+@import "../../assets/style/BreakPoints.scss";
+
+.sidbar{
+  display: none;
+  width: 350px;
+  padding: 1rem;
+  max-height: 100vh;
+  height: 100vh;
+  
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+}
+
+@include lg{
+  .sidbar{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 350px;
+    padding: 1rem;
+
+    
+  
+  }
+  
+}

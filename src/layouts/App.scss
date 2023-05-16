@@ -16,15 +16,7 @@
     border-right: 1px solid #ebeef0;
     
   }
-  .sidebar{
-    width: 300px;
-    display: none;
-  }
+  
   
 }
 
-@include lg{
-  .sidebar{
-    display: initial !important;
-  }
-}
