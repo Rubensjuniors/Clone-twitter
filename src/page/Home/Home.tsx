@@ -11,6 +11,19 @@ const TimeLine = () => {
     "Meu primeiro tweet",
     "Teste",
     "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
+    "Deu certo tweetar!",
   ]);
 
   const createNewTweet = (event: FormEvent) => {

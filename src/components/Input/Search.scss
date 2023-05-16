@@ -1,0 +1,47 @@
+@import "../../assets/style/ultilitarios.scss";
+@import "../../assets/style/BreakPoints.scss";
+
+.searchbar {
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  color: #202124;
+  display: flex;
+  z-index: 3;
+  height: 44px;
+  background: white;
+  border: 1px solid #dfe1e5;
+  box-shadow: none;
+  border-radius: 24px;
+  width: auto;
+
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.825rem;
+    padding: 1rem;
+
+    &-button{
+      background: transparent;
+      display: inline-block;
+      svg{
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-top: 3px;
+      }
+    }
+
+    &-input{
+      margin: 0;
+      padding: 0;
+      color: rgba(0, 0, 0, .87);
+      word-wrap: break-word;
+      outline: none;
+      font-size: 1rem;
+      max-width: 100%;
+      width: 100%;
+
+    }
+  }
+}

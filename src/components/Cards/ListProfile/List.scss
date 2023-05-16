@@ -1,0 +1,24 @@
+.listProfile{
+background-color: #f7f7f7;
+border-radius: 1rem;
+&__title{
+  padding: 1rem;
+  padding-bottom: 0.3rem;
+}
+.listProfile__list{
+
+  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.show-more-button{
+  display: block;
+  padding: 1rem;
+  border-radius:  0 0  1rem 1rem;
+  &:hover{
+  background: rgba(0,0,0,0.05);
+  }
+}
+}
