@@ -6,6 +6,7 @@ import {
   Heart,
   DotsThreeOutline,
 } from "@phosphor-icons/react";
+import { useConter } from "../../Hooks/index";
 
 interface Tweet {
   photo: string;
@@ -15,7 +16,12 @@ interface Tweet {
   content: string;
 }
 
+
 const Tweet = ({ photo, name, user, time, content }: Tweet) => {
+ 
+const { like, retweet, handleLike, handleRetweet, isclickLike, isclickRetweet} = useConter()
+  
+
   return (
     <div className="tweet">
       <Link to="/Profile" className="tweet__photo">
@@ -26,7 +32,7 @@ const Tweet = ({ photo, name, user, time, content }: Tweet) => {
         <div className="tweet__texts-header">
           <div>
             <Link to="/Profile" className="limit-text-sm">
-              <strong >{name}</strong>
+              <strong>{name}</strong>
               <span>{user}</span>
             </Link>
             <span className="tweet__texts-header-time">{time}</span>
@@ -43,14 +49,20 @@ const Tweet = ({ photo, name, user, time, content }: Tweet) => {
             <ChatCircle />
             <span>0</span>
           </Link>
-          <div className="tweet__texts-interaction-item">
-            <ArrowsClockwise />
-            <span>0</span>
-          </div>
-          <div className="tweet__texts-interaction-item">
+          <button
+            className={`tweet__texts-interaction-item ${isclickRetweet ? 'active-click' : '' }`}
+            onClick={()=> handleRetweet()}
+          >
+            <ArrowsClockwise/>
+            <span >{retweet}</span>
+          </button>
+          <button
+            className={`tweet__texts-interaction-item ${isclickLike ? 'active-click-like' : '' }`}
+            onClick={()=> handleLike()}
+          >
             <Heart />
-            <span>0</span>
-          </div>
+            <span>{like}</span>
+          </button>
         </div>
       </div>
     </div>

@@ -1,8 +1,7 @@
 @import "./BreakPoints.scss";
 
 $twitter-blue: #1da1f2;
-$thema-light: #ffffff;
-$thema-dark: #000;
+
 
 @mixin TweetButton($width: auto, $fontSize: 1rem, $padding: 1rem) {
   width: $width;
