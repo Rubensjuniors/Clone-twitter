@@ -1,5 +1,3 @@
-import useConter from "./useConter/useConter";
+import useConter from './useConter/useConter'
 
-export {
-  useConter
-}
+export default useConter

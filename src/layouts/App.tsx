@@ -1,7 +1,7 @@
-import "./App.scss";
-import { Outlet } from "react-router-dom";
-import MenuBar from "../components/MenuLateral/MenuBar";
-import Sidbar from "../components/Sidbar/Sidbar";
+import './App.scss'
+import { Outlet } from 'react-router-dom'
+import MenuBar from '../components/MenuLateral/MenuBar'
+import Sidbar from '../components/Sidbar/Sidbar'
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
         <Sidbar />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App

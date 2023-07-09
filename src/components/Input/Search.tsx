@@ -1,5 +1,5 @@
-import { MagnifyingGlass } from "@phosphor-icons/react";
-import "./Search.scss";
+import { MagnifyingGlass } from '@phosphor-icons/react'
+import './Search.scss'
 
 const Search = () => {
   return (
@@ -16,12 +16,11 @@ const Search = () => {
           autoCapitalize="off"
           autoComplete="off"
           title="Search"
-          role="combobox"
           placeholder="Search Twitter"
         />
       </label>
     </form>
-  );
-};
+  )
+}
 
-export default Search;
+export default Search

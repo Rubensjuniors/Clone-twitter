@@ -1,6 +1,6 @@
-import "./MenuBar.scss";
-import twitterLogo from "../../assets/log-twitter.svg";
-import { Link, NavLink } from "react-router-dom";
+import './MenuBar.scss'
+import twitterLogo from '../../assets/log-twitter.svg'
+import { NavLink } from 'react-router-dom'
 import {
   House,
   Hash,
@@ -11,8 +11,8 @@ import {
   User,
   DotsThreeCircle,
   Pencil,
-} from "@phosphor-icons/react";
-import ProfileCard from "./Profile/Profile";
+} from '@phosphor-icons/react'
+import ProfileCard from './Profile/Profile'
 
 const MenuBar = () => {
   return (
@@ -71,7 +71,7 @@ const MenuBar = () => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default MenuBar;
+export default MenuBar

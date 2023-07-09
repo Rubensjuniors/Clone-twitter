@@ -1,8 +1,8 @@
-import "./_Header.scss";
-import { Sparkle } from "@phosphor-icons/react";
+import './_Header.scss'
+import { Sparkle } from '@phosphor-icons/react'
 
-interface HeaderProps{
-  title: string 
+interface HeaderProps {
+  title: string
 }
 
 const Header = (props: HeaderProps) => {
@@ -11,7 +11,7 @@ const Header = (props: HeaderProps) => {
       {props.title}
       <Sparkle />
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

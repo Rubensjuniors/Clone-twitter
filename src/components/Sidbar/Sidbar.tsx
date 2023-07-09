@@ -1,37 +1,37 @@
-import List from "../Cards/ListProfile/List";
-import Tags from "../Cards/happening/CardTags/Tags";
-import Happening from "../Cards/happening/Happening";
-import Search from "../Input/Search";
-import "./Sidbar.scss";
+import List from '../Cards/ListProfile/List'
+import Tags from '../Cards/happening/CardTags/Tags'
+import Happening from '../Cards/happening/Happening'
+import Search from '../Input/Search'
+import './Sidbar.scss'
 
 const Sidbar = () => {
   const trandings = [
     {
-      trending: "Trending in Brazil",
-      tag: "UMA TRANDING!!!!!!!!!",
-      number: "2.453",
+      trending: 'Trending in Brazil',
+      tag: 'UMA TRANDING!!!!!!!!!',
+      number: '2.453',
     },
     {
-      trending: "Trending in Brazil",
-      tag: "#show",
-      number: "3.454",
+      trending: 'Trending in Brazil',
+      tag: '#show',
+      number: '3.454',
     },
     {
-      trending: "Trending in Brazil",
-      tag: "Javascript",
-      number: "5.453",
+      trending: 'Trending in Brazil',
+      tag: 'Javascript',
+      number: '5.453',
     },
     {
-      trending: "Trending in Brazil",
-      tag: "React",
-      number: "3.453",
+      trending: 'Trending in Brazil',
+      tag: 'React',
+      number: '3.453',
     },
     {
-      trending: "Trending in Brazil",
-      tag: "#css",
-      number: "25.453",
+      trending: 'Trending in Brazil',
+      tag: '#css',
+      number: '25.453',
     },
-  ];
+  ]
 
   return (
     <div className="sidbar">
@@ -45,14 +45,13 @@ const Sidbar = () => {
               title={trand.tag}
               tweets={trand.number}
             />
-          );
+          )
         })}
       </Happening>
-      
-      <List/>
 
+      <List />
     </div>
-  );
-};
+  )
+}
 
-export default Sidbar;
+export default Sidbar

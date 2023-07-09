@@ -1,26 +1,30 @@
-import { Link } from "react-router-dom";
-import "./_Tweet.scss";
+import { Link } from 'react-router-dom'
+import './_Tweet.scss'
 import {
   ChatCircle,
   ArrowsClockwise,
   Heart,
   DotsThreeOutline,
-} from "@phosphor-icons/react";
-import { useConter } from "../../Hooks/index";
+} from '@phosphor-icons/react'
+import useConter from '../../Hooks/index'
 
 interface Tweet {
-  photo: string;
-  name: string;
-  user: string;
-  time: string | number;
-  content: string;
+  photo: string
+  name: string
+  user: string
+  time: string | number
+  content: string
 }
 
-
 const Tweet = ({ photo, name, user, time, content }: Tweet) => {
- 
-const { like, retweet, handleLike, handleRetweet, isclickLike, isclickRetweet} = useConter()
-  
+  const {
+    like,
+    retweet,
+    handleLike,
+    handleRetweet,
+    isclickLike,
+    isclickRetweet,
+  } = useConter()
 
   return (
     <div className="tweet">
@@ -50,15 +54,19 @@ const { like, retweet, handleLike, handleRetweet, isclickLike, isclickRetweet} =
             <span>0</span>
           </Link>
           <button
-            className={`tweet__texts-interaction-item ${isclickRetweet ? 'active-click' : '' }`}
-            onClick={()=> handleRetweet()}
+            className={`tweet__texts-interaction-item ${
+              isclickRetweet ? 'active-click' : ''
+            }`}
+            onClick={() => handleRetweet()}
           >
-            <ArrowsClockwise/>
-            <span >{retweet}</span>
+            <ArrowsClockwise />
+            <span>{retweet}</span>
           </button>
           <button
-            className={`tweet__texts-interaction-item ${isclickLike ? 'active-click-like' : '' }`}
-            onClick={()=> handleLike()}
+            className={`tweet__texts-interaction-item ${
+              isclickLike ? 'active-click-like' : ''
+            }`}
+            onClick={() => handleLike()}
           >
             <Heart />
             <span>{like}</span>
@@ -66,7 +74,7 @@ const { like, retweet, handleLike, handleRetweet, isclickLike, isclickRetweet} =
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Tweet;
+export default Tweet

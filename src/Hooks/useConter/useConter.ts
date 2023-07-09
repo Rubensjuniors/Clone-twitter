@@ -1,31 +1,27 @@
-import { useState } from "react"
+import { useState } from 'react'
 
-
-export default function useConter(){
-
+export default function useConter() {
   const [like, setLike] = useState<number>(0)
   const [isclickLike, setisclickLike] = useState<boolean>(false)
   const [retweet, setRetweet] = useState<number>(0)
   const [isclickRetweet, setisclickRetweet] = useState<boolean>(false)
 
-  function handleLike(){
+  function handleLike() {
     setisclickLike(!isclickLike)
-    if(isclickLike){  
+    if (isclickLike) {
       return setLike(like - 1)
     }
 
     return setLike(like + 1)
   }
-  function handleRetweet(){
+  function handleRetweet() {
     setisclickRetweet(!isclickRetweet)
-    if(isclickRetweet){  
+    if (isclickRetweet) {
       return setRetweet(retweet - 1)
     }
 
     return setRetweet(retweet + 1)
   }
-
-
 
   return {
     like,
@@ -33,6 +29,6 @@ export default function useConter(){
     handleLike,
     handleRetweet,
     isclickLike,
-    isclickRetweet
+    isclickRetweet,
   }
 }
