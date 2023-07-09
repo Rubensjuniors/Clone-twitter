@@ -1,11 +1,7 @@
-import './List.scss';
+import './List.scss'
 
 const List = () => {
-  return (
-    <div>
-      
-    </div>
-  );
+  return <div></div>
 }
 
-export default List;
+export default List

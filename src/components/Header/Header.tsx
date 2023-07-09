@@ -1,14 +1,11 @@
 import './_Header.scss'
 import { Sparkle } from '@phosphor-icons/react'
+import { HeaderProps } from './type'
 
-interface HeaderProps {
-  title: string
-}
-
-const Header = (props: HeaderProps) => {
+const Header = ({ title }: HeaderProps) => {
   return (
     <div className="header">
-      {props.title}
+      {title}
       <Sparkle />
     </div>
   )
