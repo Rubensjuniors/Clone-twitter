@@ -30,7 +30,7 @@ const TimeLine = () => {
     'Deu certo tweetar!',
     'Deu certo tweetar!',
     'Deu certo tweetar!',
-    'Deu certo tweetar!',
+    'Deu certo tweetar 247248723874!',
   ])
 
   const createNewTweet = (event: FormEvent) => {
