@@ -20,7 +20,7 @@ const TimeLine = () => {
     'Deu certo tweetar!',
     'Deu certo tweetar!',
     'Deu certo tweetar!',
-    'Deu certo tweetar!',
+    'Deu certo tweetadsfsdfsfsdfsdfr!',
     'Deu certo tweetar!',
     'Deu certo tweetar!',
     'Deu certo tweetar!',
